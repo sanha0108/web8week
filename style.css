@@ -1,0 +1,211 @@
+@import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
+        @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css");
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            gap: 1px;
+            background-color: white;
+            grid-template-columns: 120px 1.3fr 1.7fr;
+            grid-template-rows: 140px 1fr;
+            transition: margin-left 0.3s ease-out, width 0.3s ease-out;
+            overflow: hidden;
+        }
+
+        .container.open{
+            margin-left: 420px;
+            width: calc(100vw - 420px);
+        }
+
+        
+        .nav{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            display: flex;
+            background-color: #53C1FF;
+            flex-direction: column;
+
+            align-items: center;
+        }
+
+        .header{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            display: flex;
+            background-color: #53C1FF;
+        }
+
+        .main_left{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            display: flex;
+            background-color: #53C1FF;
+        }
+
+        .main_right{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            display: flex;
+            background-color: #53C1FF;
+
+            align-items: center;
+            padding-left: 6.25vw;
+        }
+
+        .menuA{
+            display: flex;
+            position: fixed;
+            flex-direction: column;
+            width: 420px;
+            height: 100vh;
+            transform: translateX(-420px);
+            transition: all 0.3s ease-out;
+
+            background-color: #519DF6;
+            padding-left: 56px;
+            padding-top: 208px;
+            font-size: 1.875vw;
+            font-weight: 700;
+
+        }
+
+        .menuA.open{
+            transform: translateX(0);
+            z-index: 999;
+        }
+
+        .menuA a{
+            margin-bottom: 2.3vw;
+            color: white;
+        }
+        
+
+        .notiA{
+            display: flex;
+            position: fixed;
+            flex-direction: column;
+            width: 544px;
+            height: 100vh;
+            transform: translateX(calc(100vw + 544px));
+        }
+
+        .notiA.open{
+            transform: translate(calc(100vw - 544px));
+        }
+
+        .menu img{
+            width: 56px;
+            height: 56px;
+            margin-top: 44px;
+            z-index: 1500;
+        }
+
+        .menu img.open{
+            transform: translateX(420px);
+            z-index: 1500;
+        }
+
+        .header{
+            justify-content: center;
+        }
+
+        .headerM{
+            width: calc(100vw - 120px - 40px);
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo{
+            font-family: 'SCoreDream';
+            font-size: 2.9vw;
+            font-weight: 700;
+            margin-left: 52px;
+            color: white;
+        }
+
+        .noti{
+            display: flex;
+            margin-right: 48px;
+        }
+
+        .notiIcon{
+            width: 48px;
+            height: 48px;
+        }
+
+        .new{
+            width: 12px;
+            height: 12px;
+        }
+
+        .main_left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .poster_wrap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .poster_wrap img{
+            width: 19vw;
+            display: flex;
+            position: absolute;
+            z-index: 0;
+            top:center;
+            left:center;
+            box-shadow: 0 0px 12px rgba(0,0,0,0.1);
+        }
+
+        .info_container{
+            color: white;
+        }
+
+        .info{
+            font-weight: 300;
+            font-size: 1.67vw;
+            margin-bottom: 1.04vw;
+        }
+
+        .festival_title{
+            font-weight: 600;
+            font-size: 1.67vw;
+            margin-bottom: 0.625vw;
+        }
+
+        .date, .add, .tel{
+            font-weight: 300;
+            font-size: 1.25vw;
+        }
+
+        .date{
+            margin-bottom: 1.25vw;
+        }
+
+        .add{
+            margin-bottom: 0.625vw;
+        }
